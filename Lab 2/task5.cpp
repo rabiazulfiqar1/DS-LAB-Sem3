@@ -13,7 +13,7 @@ int main()
 
     for (int i = 0; i < 4; i++)
     {
-        cout << "Enter vals for dept 1: " << endl;
+        cout << "Enter vals for dept "<<i+1<<": " << endl;
         for (int j = 0; j < seatingCapacity[i]; j++)
         {
             cin >> attendees[i][j];
@@ -29,4 +29,10 @@ int main()
         }
         cout << endl;
     }
+
+    for (int i = 0; i < 4; i++)
+    {
+        delete[] attendees[i];
+    }
+    delete[] attendees;
 }
